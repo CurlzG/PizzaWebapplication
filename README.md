@@ -2,6 +2,12 @@
 ## For the Application 
 This application was builded in eclipse using the dynamic web project for starting and using the tomcat servers for the local server and mysql for the database.
 
+### Key things 
+Using an arraylist, for Index.jsp to allow for the customer to add as many pizzas as they want to the order.
+Using an Map, for Delivery.jsp to allow the delivery driver to see what order nums belong to what address. (Delivery Orders for the Key and Arraylist of Integers for Values).
+<% %> using ejs in the page to make dynamic and less static. 
+Using Classes to make less amount of repeating code as possible. 
+
 ## Index.jsp
 For the customer experience I let them order nothing on there pizza as long they, had there name address for the delivery and base and size selcted for the order.
 Another thing I made for the customer experience is that when someone is ordering more than one pizza they dont have to enter there name and address in again. 
@@ -32,4 +38,4 @@ Quanity allows us to see how many pizzas were placed inside of that order.
 
 ### Future Improvements
 Dicussion on whether its important to allow the customer to be able to let the customer order nothing on the pizza, Dicussion on updating the front end of the pages
-to make it look more mordern. Improving the databse, to allow for completed orders to see for history, userID logins so only certain IDs can see the delivery page
+to make it look more mordern. Improving the databse, to allow for completed orders to see for history, userID logins so only certain IDs can see the delivery page. Adding env files to make it more secure.
