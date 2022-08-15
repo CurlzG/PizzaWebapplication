@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Non Mushroom  Pizza Company</title>
+<title>No Mushroom On My Pizza Pizza</title>
 <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
@@ -79,7 +79,7 @@
 </div>
 </form>
 <div class="Middle">
-<p> Middle</p>
+<img src="./image/Logo.png" style="width:100%;height:auto;">
 <% if(warning != null){ %>
 <p> <%= warning %> </p>
 <% } %>
