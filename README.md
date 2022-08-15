@@ -16,7 +16,10 @@ Another thing I made for the customer experience is that when someone is orderin
 For the delivery driver, I made a map that was the deilveryorders object for the key and the Integer Arraylist for the value, so we could collectively match
 the order number to which Name/Address they are going too, then jsp would display the map on screen using ejs <% %>
 <br> 
-<img src=https://user-images.githubusercontent.com/68049810/184563091-ec345f4b-7b9d-4de8-92b7-c16094ade0a6.png style="width:200px; height:300px">
+<img src=https://user-images.githubusercontent.com/68049810/184563091-ec345f4b-7b9d-4de8-92b7-c16094ade0a6.png style="width:400px; height:400px">
+<img src=https://user-images.githubusercontent.com/68049810/184564281-4cb18e34-8a1e-476a-9f79-9474e8e18cca.png style="width:400px; height:400px">
+
+
 <br> This is what the delivery pages looks like with orders to be delivered. Clicking on delivered will remove the order from being visible showing that it has been delivered. 
  ## Data base
  The Databse, uses a single table (Orders inside of Pizza life) which displays like this. 
