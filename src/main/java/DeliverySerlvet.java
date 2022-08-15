@@ -29,9 +29,10 @@ public class DeliverySerlvet extends HttpServlet {
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * Making the call to the sql, then to map them for display which order nums belong to who and where it will be delivered
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		Driver drive = new Driver();
 		if(request.getParameter("getOrder") != null) {
@@ -54,13 +55,9 @@ public class DeliverySerlvet extends HttpServlet {
 				}
 			
 			request.setAttribute("map", map);
-			//request.setAttribute("totalOrders", total);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		}else {
-			//for(int i = 0; i < )
 		}
 		
 		request.getRequestDispatcher("delivery.jsp").forward(request, response);

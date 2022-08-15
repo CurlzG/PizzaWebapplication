@@ -7,6 +7,7 @@ public class Orders {
 	public String top3;
 	public String Address;
 	
+	//Orders Constructor
 	public Orders(String name, String base, String size,String top1, String top2,String top3, String address) {
 		this.Name = name;
 		this.Base = base;

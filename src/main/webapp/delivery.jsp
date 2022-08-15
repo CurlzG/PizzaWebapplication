@@ -27,9 +27,7 @@
 <% } %>
 <span class="close"> <b> Delivered </b> </span> </li>
 <% } %>
-<form method=get action="DeliverySerlvet">
-<input type="submit" value="Finished Orders" name="FinshedOrders" class="input-del" >
-</form>
+
 <% } else { %>
 <p> No Delivery Present </p>
 <% } %>

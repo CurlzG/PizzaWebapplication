@@ -16,6 +16,7 @@ public class Driver {
 	public ResultSet myRes;
 	
 	//Constructor Method
+	//For Creating the sql calls
 	public Driver() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -48,6 +49,7 @@ public class Driver {
 		String query = "insert into pizzalife.orders" + "(order_num,name, base, size, topping1,topping2,topping3, address,quanity,timeplace)" + "values (" + length+ ",'" + order.Name + "','" + order.Base + "','" +order.Size + "','" + order.top1 + "','" + order.top2 + "','" + order.top3 + "','" + order.Address +"','"+quanity+"','"+date+"')";
 	    myStmt.executeUpdate(query);
 	}
+	//Creating Delivery Orders from the orders Database
 	public ArrayList<DeliveryOrder> getDeliv() throws SQLException {
 		ArrayList<DeliveryOrder> totalOrder = new ArrayList<DeliveryOrder>();
 		myRes = myStmt.executeQuery("SELECT" + " * " + "from " + " pizzalife.orders");

@@ -25,18 +25,20 @@ public class TestSerlvet extends HttpServlet {
      */
     public TestSerlvet() {
         super();
-        listOrders = new ArrayList<Orders>();
-        // TODO Auto-generated constructor stub
+        listOrders = new ArrayList<Orders>(); // Creating the listOrders
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * Add Pizza Button 
+	 * The Add pizza has some boundaries, they cant add a pizza if there is no name/address or no base and or no size selected
+	 * 
+	 * Submit Pizza Button
+	 * Takes the collection of Orders and then fills the rest of information out and adds it to the database. 
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		response.setContentType("text/html");
-		PrintWriter out = null;
 		Driver drive = new Driver();
 		//Declaring Variables
 		String Name = String.valueOf(request.getParameter("Name"));
@@ -62,14 +64,11 @@ public class TestSerlvet extends HttpServlet {
 				} else {
 					request.setAttribute("Warning", "No Values Were Entered");
 				}
-				
-				//System.out.println("Value Empty");
 			}
 			request.setAttribute("listOrders", listOrders);
 			request.getRequestDispatcher("index.jsp").forward(request, response);
 			
 		} else {
-			System.out.println("NOPE");
 			String orderName  = listOrders.get(0).Name;
 			String orderAddress  = listOrders.get(0).Address;
 			for(int i = 0; i < listOrders.size(); i++) {
@@ -100,9 +99,7 @@ public class TestSerlvet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		System.out.println("Hello");
-		//doGet(request, response);
+		doGet(request, response);
 	}
 
 }
