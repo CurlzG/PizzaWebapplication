@@ -20,7 +20,7 @@ public class Driver {
 	public Driver() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pizzalife","root","MikaelaJordan2021");
+			myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pizzalife","","");
 			myStmt = myConn.createStatement();
 			
 		
